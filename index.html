@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bootstrap Website</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-danger fixed-top">
+        <div class="container-fluid">
+            <img src="img/france-logo-with-flag-vector.jpg" class="img-fluid rounded-circle mx-3" alt="france logo"
+                width="75" height="75">
+            <a class="navbar-brand border-end px-3 text-uppercase text-white fs-4" href="#">france</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white first-letter-color fs-5" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white first-letter-color fs-5" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white first-letter-color fs-5 border rounded shadow-lg"
+                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trips
+                        </a>
+                        <ul class="dropdown-menu opacity-75">
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Eiffel Tower</a></li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Louvre Museum</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Arc de Triomphe</a></li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Notre Dame Cathedral</a></li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Palace of Versailles</a></li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Mont Saint-Michel</a></li>
+                            <li><a class="dropdown-item text-white text-primary-emphasis text-uppercase fw-semibold"
+                                    href="#">Pont du Gard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-white fs-5" aria-disabled="true">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 mx-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light mx-2" type="submit">Search</button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-light mx-2" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title fs-5  text-white" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label text-primary">Email address</label>
+                            <input type="email" class="form-control border-primary rounded-3" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label text-primary">Password</label>
+                            <input type="password" class="form-control border-primary rounded-3"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-primary text-white">Login</button>
+                    <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Bar -->
+    <aside>
+        <div class="container-fluid p-0 " style="position: relative;">
+            <div class="d-flex flex-column justify-content-between ms-auto"
+                style="position: fixed; top: 200px;right:20px; z-index: 30;">
+                <div class="aside-icon my-2"><a href="#"><i class="fab fa-facebook-square" style="font-size: 70px;"></i></a></div>
+                <div class="aside-icon my-2"><a href="#"><i class="fab fa-whatsapp-square" style="font-size: 70px;"></i></a></div>
+                <div class="aside-icon my-2"><a href="#"><i class="fab fa-twitter-square" style="font-size: 70px;"></i></a></div>
+                <div class="aside-icon my-2"><a href="#"><i class="fab fa-linkedin" style="font-size: 70px;"></i></a></div>
+                <div class="aside-icon my-2"><a href="#"><i class="fab fa-instagram-square" style="font-size: 70px;"></i></a></div>
+            </div>
+    </aside>
+
+    <!-- Carousel Items -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/arc-de-triomphe.jpg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-md-block bg-secondary rounded-1 bg-opacity-75 ">
+                    <h5 class="text-uppercase">arc de triomphe</h5>
+                    <p class="text-capitalize">we love this city!</p>
+                    <button class="btn btn-primary rounded-4">Visit Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/eiffel-tower.jpg" class="d-block w-100  vh-100" alt="...">
+                <div class="carousel-caption d-md-block bg-secondary rounded-1 bg-opacity-75 ">
+                    <h5 class="text-uppercase">eiffel tower</h5>
+                    <p class="text-capitalize">we love this city!</p>
+                    <button class="btn btn-primary rounded-4">Visit Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/louvre-museum.jpg" class="d-block w-100  vh-100" alt="...">
+                <div class="carousel-caption d-md-block bg-secondary rounded-1 bg-opacity-75 ">
+                    <h5 class="text-uppercase">louvre museum</h5>
+                    <p class="text-capitalize">we love this city!</p>
+                    <button class="btn btn-primary rounded-4">Visit Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/notre-dame-cathedral.jpg" class="d-block w-100  vh-100" alt="...">
+                <div class="carousel-caption d-md-block bg-secondary rounded-1 bg-opacity-75 ">
+                    <h5 class="text-uppercase">notre dame cathedral</h5>
+                    <p class="text-capitalize">we love this city!</p>
+                    <button class="btn btn-primary rounded-4">Visit Us</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Card -->
+    <div class="card w-100 mb-3" style="background-color: #0174BE">
+        <div class="card-body">
+            <h5 class="card-title text-uppercase text-white">welcome</h5>
+            <p class="card-text text-white">Are you planning to visit France? We offer the ultimate tour in France,
+                covering Paris, Lyon. From a one day trip to a 10 day dream vacation, we will take care of all your
+                needs. book hotels. 24/7 Customer Service. .</p>
+            <a href="#" class="btn btn-outline-light">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="mx-auto my-3 p-5  text-light text-center text-shadow shadow-lg " style="background-color: #0C356A;">
+        <h1>Popular destinations in France</h1>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button text-uppercase bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Paris
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy
+                    and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed text-uppercase bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Lyon
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Lyon, the capital city in France’s Auvergne-Rhône-Alpes region, sits at the junction of the Rhône
+                    and Saône rivers. Its center reflects 2,000 years of history from the Roman Amphithéâtre des Trois
+                    Gaules, medieval and Renaissance architecture in Vieux (Old) Lyon, to the modern Confluence district
+                    on Presqu'île peninsula.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed text-uppercase bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Marseille
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Marseille, a port city in southern France, has been a crossroads of immigration and trade since its
+                    founding by the Greeks circa 600 B.C. At its heart is the Vieux-Port (Old Port), where fishmongers
+                    sell their catch along the boat-lined quay.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translate Cards -->
+
+    <div class="container-fluid mt-4 bg-secondary-subtle my-3">
+        <div class="translate-cards-content row">
+            <!-- Card #1 -->
+            <div class="card-1 col-lg col-sm-12">
+                <div class="mx-auto mt-3 p-2 text-light text-center shadow-lg" style="background-color: #0C356A;">
+                    <h1 class="fs-2">Translate From Arabic To English</h1>
+                </div>
+
+                <div class="card p-3 text-white shadow-lg"
+                    style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: #0174BE;">
+                    <div class="card-body">
+                        <h4 class="card-title ">ًWrite and Translate <a href="https://translate.google.com.eg/?hl=en"
+                                target="_blank" class="text-info">Press Here</a></h4>
+                        <button class="btn btn-light border border-2 shadow-lg" onclick="copyToClipboard('sentence')"
+                            id="btnCopy" style="font-size: 18px; color: #0C356A" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-title="Copy To Clipboard">
+                            Copy
+                        </button>
+                        <br>
+                        <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment"
+                            placeholder="translate:" name="text"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #2 -->
+            <div class="card-2 col-lg col-sm-12">
+                <div class="mx-auto mt-3 p-2 text-light text-center shadow-lg" style="background-color:#0C356A;">
+                    <h1 class="fs-2">Translate From Arabic To French</h1>
+                </div>
+
+                <div class="card p-3 text-white shadow-lg"
+                    style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: #0174BE;">
+                    <div class="card-body">
+                        <h4 class="card-title ">ًWrite and Translate <a
+                                href="https://translate.google.com.eg/?hl=en&sl=ar&tl=fr&op=translate" target="_blank"
+                                class="text-info">Press Here</a></h4>
+                        <button class="btn btn-light border border-2 shadow-lg"
+                            onclick="alert('Your text has been copied')" id="btnCopy" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-title="Copy To Clipboard"
+                            style="font-size: 18px; color: #0C356A">
+                            Copy
+                        </button>
+                        <br>
+                        <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment"
+                            placeholder="translate:" name="text"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #3 -->
+            <div class="card-3 col-lg col-sm-12">
+                <div class="mx-auto mt-3 p-2 text-light text-center shadow-lg" style="background-color: #0C356A;">
+                    <h1 class="fs-2">Translate From Arabic To German</h1>
+                </div>
+
+                <div class="card p-3 text-white shadow-lg"
+                    style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: #0174BE;">
+                    <div class="card-body">
+                        <h4 class="card-title ">ًWrite and Translate <a
+                                href="https://translate.google.com.eg/?hl=en&sl=ar&tl=de&op=translate" target="_blank"
+                                class="text-info">Press Here</a></h4>
+                        <button class="btn btn-light border border-2 shadow-lg" onclick="copyToClipboard()" id="btnCopy"
+                            data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Copy To Clipboard"
+                            style="font-size: 18px; color: #0C356A">
+                            Copy
+                        </button>
+                        <br>
+                        <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment"
+                            placeholder="translate:" name="text"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="separator mx-auto">
+        <div class="fixed-img1"></div>
+    </section>
+
+
+    <!-- Tours Section -->
+    <section class="tours">
+        <div class="mx-auto my-3 p-3 text-light text-center text-shadow shadow-lg bg-danger">
+            <h1>Popular cities in France</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-around pb-5 ">
+                <!-- Paris -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-capital.jpg" class="card-img-top shadow w-100" alt=" pic">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">PARIS</h5>
+                        <p class="card-text text-primary">Capital of France</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Marseille -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-2.jpg" class="card-img-top shadow w-100" alt=" pic">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">MARSEILLE</h5>
+                        <p class="card-text text-primary">The oldest city in France</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Lyon -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-3.jpg" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">LYON</h5>
+                        <p class="card-text text-primary">Famous for historical and architectural landmarks</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Toulouse -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-4.jpg" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">TOULOUSE</h5>
+                        <p class="card-text text-primary">Fourth largest city in France</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Strasbourg -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-5.jpg" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">STRASBOURG</h5>
+                        <p class="card-text text-primary">Most beautiful city in Europe</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Bordeaux  -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-6.jpg" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">BORDEAUX</h5>
+                        <p class="card-text text-primary">City on the Garonne River in southwestern France</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Montpellier -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-7.JPG" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">MONTPELLIER</h5>
+                        <p class="card-text text-primary">Famous for its wine</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+
+                <!-- Lille -->
+                <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+                    <img src="img/tour-8.jpg" class="card-img-top shadow w-100" alt=" pic">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">LILLE</h5>
+                        <p class="card-text text-primary">Renowned for its friendliness</p>
+                        <button class="btn btn-danger text-light float-end">Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="separator mx-auto">
+        <div class="fixed-img2"></div>
+    </section>
+
+    <div class="mx-auto my-3 p-5  text-light text-center text-shadow shadow-lg " style="background-color: #0C356A;">
+        <h1>SPECIAL THANKS FOR</h1>
+    </div>
+
+    <section class="thanks mt-5 mb-5 pb-5 pt-5">
+        <div class="container" style="width: 100%;">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-hover text-white style-card"
+                        style="background-image: url(img/trainer-1.jpg); background-position: center; background-size: cover">
+                        <img class="card-img opacity-100" src="" height="300" style="visibility: hidden;">
+                        <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body move-down">
+                                <h4 class="card-title mt-0"><a class="text-white remove-underline" herf="#">All thanks
+                                        and
+                                        appreciation</a></h4>
+                                <small><i class="fa-regular fa-clock"></i> October 15, 2020</small>
+                            </div>
+                            <div class="card-footer">
+                                <div class="media">
+                                    <img class="mr-3 rounded-circle" src="img/trainer-1.jpg"
+                                        alt="Generic placeholder image" style="width:100px">
+                                    <div class="media-body">
+                                        <h6 class="my-0 text-white d-block">ُEng. Mohammed Ismail "som3a"</h6>
+                                        <small>Director of UI/UX</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-hover text-white style-card"
+                        style="background-image: url(img/trainer-2.jpg); background-position: center; background-size: cover">
+                        <img class="card-img opacity-100" src="" height="300" style="visibility: hidden;">
+                        <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body move-down">
+                                <h4 class="card-title mt-0"><a class="text-white remove-underline" herf="#">All thanks
+                                        and
+                                        appreciation</a></h4>
+                                <small><i class="fa-regular fa-clock"></i> October 15, 2020</small>
+                            </div>
+                            <div class="card-footer">
+                                <div class="media">
+                                    <img class="mr-3 rounded-circle" src="img/trainer-2.jpg"
+                                        alt="Generic placeholder image" style="width:100px;">
+                                    <div class="media-body">
+                                        <h6 class="my-0 text-white d-block">Eng. Islam Mohammed</h6>
+                                        <small>Director of UI/UX</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4 card3">
+                    <div class="card card-hover text-white style-card"
+                        style="background-image: url(img/trainer-3.jpg); background-position: center; background-size: cover">
+                        <img class="card-img opacity-100" src="" height="300" style="visibility: hidden;">
+                        <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body move-down">
+
+                                <h4 class="card-title mt-0"><a class="text-white remove-underline" herf="#">All thanks
+                                        and
+                                        appreciation</a></h4>
+                                <small><i class="fa-regular fa-clock"></i> October 15, 2020</small>
+                            </div>
+                            <div class="card-footer">
+                                <div class="media">
+                                    <img class="mr-3 rounded-circle" src="img/trainer-3.jpg"
+                                        alt="Generic placeholder image" style="width:100px">
+                                    <div class="media-body">
+                                        <h6 class="my-0 text-white d-block">ُEng.Sally Maraush</h6>
+                                        <small>Director of UI/UX</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Podcasts -->
+    <section class="podcasts container light">
+        <div class="container py-2">
+            <div class="h1 text-center" id="pageHeaderTitle" style="font-size: 30px;">FRANCE NEWS</div>
+            <article class="card podcast-card my-5">
+                <div class="row overflow-hidden">
+                    <div class="col-lg-3 overflow-hidden rounded-start">
+                        <img src="img/eiffel-portrait.jpg" class=" img-fluid rounded-start podcast-img" alt="...">
+                    </div>
+                    <div class="col-lg-8 p-5">
+                        <h1 class="card-title "><a href="#" class="podcast-title">Podcast Title</a></h1>
+                        <div class="line1 line"></div>
+                        <div class="podcast-time">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="card-text"></div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                            asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius!
+                            Ducimus nemo
+                            accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam
+                            adipisci illo
+                            iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum
+                            quos!
+                        </div>
+                        <ul class="podcast-tagbox my-5">
+                            <li class="podcast-tag"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="podcast-tag"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="podcast-tag">
+                                <a href="#" class="play-tag"><i class="fas fa-play"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card podcast-card my-5">
+                <div class="row overflow-hidden d-flex">
+                    <div class="col-lg overflow-hidden rounded-start order-lg-1">
+                        <img src="img/arc-de-triomphe-portrait.jpg" class=" img-fluid rounded-start podcast-img"
+                            alt="...">
+                    </div>
+                    <div class="col-lg-8 p-5 order-lg-0">
+                        <h1 class="card-title "><a href="#" class="podcast-title">Podcast Title</a></h1>
+                        <div class="line2 line"></div>
+                        <div class="podcast-time">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="card-text"></div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                            asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius!
+                            Ducimus nemo
+                            accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam
+                            adipisci illo
+                            iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum
+                            quos!
+                        </div>
+                        <ul class="podcast-tagbox my-5">
+                            <li class="podcast-tag"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="podcast-tag"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="podcast-tag">
+                                <a href="#" class="play-tag"><i class="fas fa-play"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card podcast-card my-5">
+                <div class="row overflow-hidden">
+                    <div class="col-lg overflow-hidden rounded-start">
+                        <img src="img/lyon-portrait.jfif" class=" img-fluid rounded-start podcast-img" alt="...">
+                    </div>
+                    <div class="col-lg-8 p-5">
+                        <h1 class="card-title "><a href="#" class="podcast-title">Podcast Title</a></h1>
+                        <div class="line3 line"></div>
+                        <div class="podcast-time">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="card-text"></div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                            asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius!
+                            Ducimus nemo
+                            accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam
+                            adipisci illo
+                            iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum
+                            quos!
+                        </div>
+                        <ul class="podcast-tagbox my-5">
+                            <li class="podcast-tag"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="podcast-tag"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="podcast-tag">
+                                <a href="#" class="play-tag"><i class="fas fa-play"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card podcast-card my-5">
+                <div class="row overflow-hidden d-flex">
+                    <div class="col-lg overflow-hidden rounded-start order-lg-1">
+                        <img src="img/marseille-portrait.jpg" class=" img-fluid rounded-start podcast-img" alt="...">
+                    </div>
+                    <div class="col-lg-8 p-5 order-lg-0">
+                        <h1 class="card-title "><a href="#" class="podcast-title">Podcast Title</a></h1>
+                        <div class="line2 line"></div>
+                        <div class="podcast-time">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="card-text"></div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                            asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius!
+                            Ducimus nemo
+                            accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam
+                            adipisci illo
+                            iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum
+                            quos!
+                        </div>
+                        <ul class="podcast-tagbox my-5">
+                            <li class="podcast-tag"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="podcast-tag"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="podcast-tag">
+                                <a href="#" class="play-tag"><i class="fas fa-play"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <h2 class="text-center text-primary " style="font-size: 30px;">JOIN US</h2>
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241);">
+                <div class="card-body text-primary d-flex flex-column text-center">
+                    <h3 class="card-title mb-4">Subscribe Now
+                    </h3>
+                    <input class="logo-icon mb-2 rounded-4" style="align-self: center;" src="img/twetter.jpg"
+                        type="image" alt="icon">
+                    <a href="#" target="_blank" class="card-link h4 text-primary ">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241);">
+                <div class="card-body text-primary d-flex flex-column text-center">
+                    <h3 class="card-title mb-4">Follow
+                    </h3>
+                    <input class="logo-icon mb-2 rounded-4" style="align-self: center;" src="img/whats.jpg" type="image"
+                        alt="icon">
+                    <a href="" target="_blank" class="card-link h4 text-primary">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-light " style="width: 250px;  box-shadow: -5px -5px 20px 10px rgb(201, 198, 241)">
+                <div class="card-body text-primary d-flex flex-column text-center">
+                    <h3 class="card-title mb-4">Like the page
+                    </h3>
+                    <input class="logo-icon mb-2 rounded-4" style="align-self: center;" src="img/in.jpg" type="image"
+                        alt="icon">
+                    <a href="" target="_blank" class="card-link h4 text-primary">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241)">
+                <div class="card-body text-primary d-flex flex-column text-center">
+                    <h3 class="card-title mb-4">Watch Videos
+                    </h3>
+                    <input class="logo-icon mb-2 rounded-4" style="align-self: center;" src="img/insta.jpg" type="image"
+                        alt="icon">
+                    <a href="" target="_blank" class="card-link h4 text-primary">Go to link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" text-light pb-5 " style="background-color: #0C356A;">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class=" border-top border-3 border-light my-3">
+                    <h5><img src="img/france-logo-with-flag-vector.jpg" alt="good pic" class="logoicon rounded-circle"
+                            width="75" height="75">&nbsp; Good Company
+                    </h5>
+                    <hr class="border-top border-3 border-light my-3">
+                    <address>
+                        <p>Tel : 000-000-000</p>
+                        <p>Address : EGYPT</p>
+                        <p>Fax : 000-000-000</p>
+                    </address>
+                </div>
+                <div class="col-md-4">
+                    <hr class="border-top border-3 border-light my-3">
+                    <h5><img src="img/france-logo-with-flag-vector.jpg" alt="good pic" class="logoicon rounded-circle"
+                            width="75" height="75">&nbsp; Important
+                        links</h5>
+                    <hr class="border-top border-3 border-light my-3">
+                    <p><a href="#">Visit Us</a></p>
+                    <p><a href="#">Take alook</a></p>
+                    <p><a href="#">Your health is more important</a></p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="border-top border-3 border-light my-3">
+                    <h5><img src="img/france-logo-with-flag-vector.jpg" alt="good pic" class="logoicon rounded-circle"
+                            width="75" height="75">&nbsp; Vision</h5>
+                    <hr class="border-top border-3 border-light my-3">
+                    <p>Services for all </p>
+                    <p>Provide best services</p>
+                    <p>You will be better than before</p>
+                </div>
+            </div>
+        </div>
+        <hr class="border-top border-3 border-light my-3">
+        <span class="text-center d-block title">Copyright &copy; 2023 Karim Fouad Chehab Mohamed, Good Company. All
+            rights</span>
+        <hr class="border-top border-3 border-light my-3">
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+</body>
+
+</html>
